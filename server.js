@@ -107,7 +107,7 @@ function procesarContacto(peticion, respuesta) {
       respuesta.status(500).json({
         estado: 'ERROR',
         status: 'ERROR',
-        mensaje: 'No fue posible enviar el mensaje. Intenta de nuevo más tarde.'
+        mensaje: 'No fue posible enviar el mensaje. Intenta de nuevo más tarde o contactarme a duohnson@gmail.com'
       });
     });
 }
@@ -120,5 +120,5 @@ servidor.get('*', (peticion, respuesta) => {
 });
 
 servidor.listen(puerto, anfitrion, () => {
-  console.log(`Servidor disponible en http://${anfitrion}:${puerto}`);
+  console.log(`http://${anfitrion}:${puerto}`);
 });
