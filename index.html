@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Uohnson — Desarrollo Web & Servidores Linux</title>
+  <meta name="description"
+    content="Portafolio de Daniel Uohnson. Desarrollador web y administrador de sistemas Linux en San José, Costa Rica. Proyectos prácticos, estables y bien construidos.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cc5a36' stroke-width='2'><path d='m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Rethink+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css?v=28">
+</head>
+
+<body>
+  <div class="riel-lateral riel-izquierdo" aria-hidden="true"></div>
+  <div class="riel-lateral riel-derecho" aria-hidden="true"></div>
+
+  <header class="cabecera-sitio">
+    <div class="contenedor-principal navegacion-cabecera">
+      <a href="#inicio" class="enlace-marca" aria-label="Daniel Uohnson - Inicio">
+        <svg class="icono-marca" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" />
+        </svg>
+        <span>Daniel Uohnson</span>
+      </a>
+
+      <nav class="menu-escritorio" aria-label="Navegación principal">
+        <a href="#inicio" class="enlace-navegacion activo">Inicio</a>
+        <a href="#proyectos" class="enlace-navegacion">Proyectos</a>
+        <a href="#habilidades" class="enlace-navegacion">Habilidades</a>
+        <a href="#servicios" class="enlace-navegacion">Servicios</a>
+        <a href="conoce-quien-soy.html" class="enlace-navegacion">Conoce quién soy</a>
+        <a href="#contacto" class="enlace-navegacion">Contacto</a>
+      </nav>
+
+      <div class="redes-cabecera">
+        <a href="https://github.com/duohnson" target="_blank" rel="noopener noreferrer" class="enlace-red"
+          aria-label="Perfil de GitHub">
+          <svg class="icono-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/duohnson/" target="_blank" rel="noopener noreferrer" class="enlace-red"
+          aria-label="Perfil de LinkedIn">
+          <svg class="icono-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <button type="button" class="boton-menu-movil" aria-label="Alternar menú" aria-expanded="false"
+          aria-controls="menu-movil">
+          <span class="linea-menu"></span>
+          <span class="linea-menu"></span>
+          <span class="linea-menu"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav id="menu-movil" class="menu-movil-desplegable" aria-label="Navegación móvil">
+    <a href="#inicio" class="enlace-movil">Inicio</a>
+    <a href="#proyectos" class="enlace-movil">Proyectos</a>
+    <a href="#habilidades" class="enlace-movil">Habilidades</a>
+    <a href="#servicios" class="enlace-movil">Servicios</a>
+    <a href="conoce-quien-soy.html" class="enlace-movil">Conoce quién soy</a>
+    <a href="#contacto" class="enlace-movil">Contacto</a>
+    <div class="redes-menu-movil">
+      <a href="https://github.com/duohnson" target="_blank" rel="noopener noreferrer" class="enlace-red-movil">
+        <svg class="icono-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+        </svg>
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/duohnson/" target="_blank" rel="noopener noreferrer" class="enlace-red-movil">
+        <svg class="icono-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="franja-estado" aria-label="Estado actual">
+    <div class="contenido-franja">
+      <span class="punto-estado-vivo" aria-hidden="true"></span>
+      <span data-scramble="Disponible para proyectos — Remoto &amp; Costa Rica">Disponible para proyectos — Remoto &amp; Costa Rica</span>
+    </div>
+  </div>
+
+  <main class="contenedor-principal">
+    <section id="inicio" class="seccion-heroe">
+      <div class="columna-heroe-principal">
+        <p class="etiqueta-origen">
+          <span class="flecha-etiqueta" aria-hidden="true">←</span>
+          <span>San José, Costa Rica</span>
+        </p>
+
+        <h1 class="titulo-editorial">
+          Desarrollo web y administración de servidores Linux.
+        </h1>
+
+        <div class="meta-autor-heroe">
+          <span class="pildora-meta">Full Stack</span>
+          <span class="pildora-meta">SysAdmin Linux</span>
+        </div>
+
+        <p class="descripcion-heroe">
+          Desarrollo aplicaciones web y administro servidores Linux en producción. La informática es mi trabajo y también mi pasatiempo; me enfoco en crear soluciones directas, estables y bien configuradas.
+        </p>
+      </div>
+
+      <aside class="columna-heroe-lateral">
+        <div class="acciones-heroe">
+          <a href="#contacto" class="boton-accion boton-accion-principal">
+            <svg class="icono-enlace-directo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg>
+            <span>Conversemos de tu proyecto</span>
+            <svg class="flecha-accion" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7M7 7h10v10" />
+            </svg>
+          </a>
+
+          <a href="#proyectos" class="boton-accion">
+            <svg class="icono-enlace-directo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg>
+            <span>Ver proyectos</span>
+            <svg class="flecha-accion" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7M7 7h10v10" />
+            </svg>
+          </a>
+        </div>
+
+        <div>
+          <h2 class="bloque-lateral-titulo">Áreas de trabajo</h2>
+          <ul class="lista-enfoque">
+            <li class="item-enfoque">
+              <svg class="icono-enfoque" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              <span>Desarrollo Web &amp; APIs REST</span>
+            </li>
+            <li class="item-enfoque">
+              <svg class="icono-enfoque" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="8" rx="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" />
+                <line x1="6" y1="6" x2="6.01" y2="6" />
+                <line x1="6" y1="18" x2="6.01" y2="18" />
+              </svg>
+              <span>Servidores Linux &amp; VPS</span>
+            </li>
+            <li class="item-enfoque">
+              <svg class="icono-enfoque" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg>
+              <span>Bases de Datos &amp; Respaldos</span>
+            </li>
+            <li class="item-enfoque">
+              <svg class="icono-enfoque" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span>Seguridad &amp; Hardening</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="bloque-lateral-titulo">Disponibilidad</h2>
+          <ul class="lista-enlaces-directos">
+            <li class="enlace-directo">
+              <span class="punto-estado-vivo" aria-hidden="true"></span>
+              <span>Abierto a colaboraciones</span>
+            </li>
+            <li class="enlace-directo">
+              <svg class="icono-enlace-directo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Lunes a Viernes (16:00 - 22:00 GMT-6)</span>
+            </li>
+            <li>
+              <a href="https://github.com/duohnson" target="_blank" rel="noopener noreferrer" class="enlace-directo">
+                <svg class="icono-enlace-directo" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+                <span>GitHub ↗</span>
+              </a>
+            </li>
+            <li class="fila-correo-interactiva">
+              <a href="mailto:duohnson@gmail.com" class="enlace-directo">
+                <svg class="icono-enlace-directo" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span>duohnson@gmail.com</span>
+              </a>
+              <button type="button" class="boton-copiar-correo" data-correo="duohnson@gmail.com"
+                aria-label="Copiar correo">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+                <span class="texto-copiar">Copiar</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section id="proyectos">
+      <div class="cabecera-seccion-flex">
+        <div>
+          <p class="etiqueta-seccion-mono">01 / PROYECTOS</p>
+          <h2 class="titulo-seccion-principal">Proyectos y trabajo práctico</h2>
+        </div>
+        <a href="#contacto" class="enlace-directo" style="font-family: var(--fuente-mono); font-size: 0.8125rem;">
+          <span>Iniciar conversación</span>
+          <svg class="icono-enlace-directo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <article class="fila-proyecto fila-proyecto-temporal revelar">
+        <div class="numero-proyecto">01 // RECIENTE</div>
+        <div>
+          <div class="insignia-estado-en-proceso">
+            <span class="punto-estado-vivo" aria-hidden="true"></span>
+            <span>En desarrollo &bull; Actualización continua</span>
+          </div>
+          <h3 class="titulo-proyecto">
+            Laboratorio de Proyectos <span class="separador-temp">&mdash;</span> <span
+              class="texto-naranja-destacado">Próximos lanzamientos</span>
+          </h3>
+          <p class="descripcion-proyecto">
+            Espacio en preparación con demostraciones de aplicaciones web, despliegues contenerizados en Linux y código abierto disponible en mis repositorios.
+          </p>
+          <p class="etiquetas-tecnologia-proyecto">
+            Node.js &bull; Express &bull; Docker &bull; Linux &bull; APIs REST
+          </p>
+        </div>
+        <div>
+          <a href="#contacto" class="enlace-accion-proyecto" aria-label="Contactar sobre proyectos">
+            <span class="texto-accion-temporal">Consultar</span>
+            <span class="flecha-proyecto-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </article>
+
+      <article class="fila-proyecto revelar">
+        <div class="numero-proyecto">02 // 2016</div>
+        <div>
+          <div class="insignia-estado-en-proceso">
+            <span class="punto-estado-vivo" aria-hidden="true"></span>
+            <span>Histórico &bull; Primera plataforma web (2016)</span>
+          </div>
+          <h3 class="titulo-proyecto">
+            EntyCraft <span class="separador-temp">&mdash;</span> <span
+              class="texto-naranja-destacado">Comunidad &amp; Servidores</span>
+          </h3>
+          <p class="descripcion-proyecto">
+            Mi primera plataforma web en producción, desarrollada a los 16 años para automatizar pagos, rangos y gestión comunitaria en servidores de videojuegos. Fue el proyecto donde pasé de configurar a programar y donde di mis primeros pasos administrando Linux por consola SSH.
+          </p>
+          <p class="etiquetas-tecnologia-proyecto">
+            Linux VPS &bull; MySQL &bull; Automatización &bull; Spigot &bull; Redes
+          </p>
+        </div>
+        <div>
+          <a href="https://entycraft.craftingstore.net/" target="_blank" rel="noopener noreferrer"
+            class="enlace-accion-proyecto" aria-label="Visitar EntyCraft (2016)">
+            <span class="texto-accion-temporal">Visitar sitio</span>
+            <span class="flecha-proyecto-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section id="habilidades" class="seccion-habilidades-dividida">
+      <div class="columna-habilidades-lista">
+        <p class="etiqueta-seccion-mono">02 / HABILIDADES</p>
+        <h2 class="titulo-seccion-principal">Herramientas y tecnologías</h2>
+
+        <div class="cuadricula-categorias-stack">
+          <div class="tarjeta-categoria-stack revelar">
+            <h3 class="titulo-categoria-stack">Frontend</h3>
+            <div class="elementos-stack">
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+                HTML5
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                </svg>
+                CSS3
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+                JavaScript
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="2" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+                React
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m19 11-4-7-4 7M15 4v16" />
+                </svg>
+                Tailwind CSS
+              </span>
+            </div>
+          </div>
+
+          <div class="tarjeta-categoria-stack revelar">
+            <h3 class="titulo-categoria-stack">Backend &amp; APIs</h3>
+            <div class="elementos-stack">
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 14 14" />
+                </svg>
+                Node.js
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                </svg>
+                Express
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="m5 12 5 5L20 7" />
+                </svg>
+                PHP
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a5 5 0 0 0-5 5v3h10V7a5 5 0 0 0-5-5z" />
+                </svg>
+                Python
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                </svg>
+                APIs REST
+              </span>
+            </div>
+          </div>
+
+          <div class="tarjeta-categoria-stack revelar">
+            <h3 class="titulo-categoria-stack">Sistemas &amp; Linux</h3>
+            <div class="elementos-stack">
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" />
+                  <rect x="2" y="14" width="20" height="8" rx="2" />
+                </svg>
+                Linux (Debian/Ubuntu)
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                </svg>
+                Docker &amp; Compose
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1.51 1 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+                Nginx
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5" />
+                  <line x1="12" y1="19" x2="20" y2="19" />
+                </svg>
+                Bash Scripts
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                Hardening SSH
+              </span>
+            </div>
+          </div>
+
+          <div class="tarjeta-categoria-stack revelar">
+            <h3 class="titulo-categoria-stack">Bases de Datos</h3>
+            <div class="elementos-stack">
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                </svg>
+                PostgreSQL
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                </svg>
+                MySQL / MariaDB
+              </span>
+              <span class="etiqueta-stack">
+                <svg class="icono-stack-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Respaldos SQL
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columna-panel-codigo">
+        <div class="panel-codigo revelar">
+          <div class="cabecera-panel-codigo">
+            <div class="puntos-panel-codigo">
+              <span class="punto-codigo punto-rojo" aria-hidden="true"></span>
+              <span class="punto-codigo punto-amarillo" aria-hidden="true"></span>
+              <span class="punto-codigo punto-verde" aria-hidden="true"></span>
+            </div>
+            <div class="pestanas-codigo">
+              <button type="button" class="pestana-codigo activa" data-pestana="perfil">perfil.json</button>
+              <button type="button" class="pestana-codigo" data-pestana="servidor">servidor.sh</button>
+              <button type="button" class="pestana-codigo" data-pestana="contacto">contacto.env</button>
+            </div>
+            <span class="etiqueta-panel-tipo">terminal</span>
+          </div>
+
+          <pre class="cuerpo-panel-codigo bloque-codigo activo" id="codigo-perfil"><code>{
+  <span class="codigo-clave">"desarrollador"</span>: <span class="codigo-cadena">"Daniel Uohnson"</span>,
+  <span class="codigo-clave">"enfoque"</span>: <span class="codigo-cadena">"Full Stack & SysAdmin Linux"</span>,
+  <span class="codigo-clave">"ubicacion"</span>: <span class="codigo-cadena">"San José, Costa Rica"</span>,
+  <span class="codigo-clave">"principios"</span>: [
+    <span class="codigo-cadena">"Código directo y mantenible"</span>,
+    <span class="codigo-cadena">"Servidores estables en producción"</span>,
+    <span class="codigo-cadena">"Configuración segura y respaldos al día"</span>
+  ],
+  <span class="codigo-clave">"disponible"</span>: <span class="codigo-valor">true</span>
+}<span class="cursor-parpadeante" aria-hidden="true"></span></code></pre>
+
+          <pre class="cuerpo-panel-codigo bloque-codigo" id="codigo-servidor"><code><span class="codigo-comando">ufw</span> <span class="codigo-argumento">default deny incoming</span>
+<span class="codigo-comando">ufw</span> <span class="codigo-argumento">allow 22/tcp 80/tcp 443/tcp</span>
+<span class="codigo-comando">docker</span> <span class="codigo-argumento">compose up -d --build</span>
+<span class="codigo-comando">nginx</span> <span class="codigo-argumento">-t &amp;&amp; systemctl reload nginx</span>
+<span class="codigo-salida">"Servicios activos y cortafuegos configurado correctamente."</span><span class="cursor-parpadeante" aria-hidden="true"></span></code></pre>
+
+          <pre class="cuerpo-panel-codigo bloque-codigo" id="codigo-contacto"><code><span class="codigo-clave">NOMBRE</span>=<span class="codigo-cadena">"Daniel Uohnson"</span>
+<span class="codigo-clave">CORREO</span>=<span class="codigo-cadena">"duohnson@gmail.com"</span>
+<span class="codigo-clave">WHATSAPP</span>=<span class="codigo-cadena">"+506 6368 9232"</span>
+<span class="codigo-clave">ZONA_HORARIA</span>=<span class="codigo-cadena">"GMT-6 (Costa Rica)"</span>
+<span class="codigo-clave">ESTADO</span>=<span class="codigo-cadena">"Disponible para nuevos proyectos"</span><span class="cursor-parpadeante" aria-hidden="true"></span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="cabecera-seccion-flex">
+        <div>
+          <p class="etiqueta-seccion-mono">03 / SERVICIOS</p>
+          <h2 class="titulo-seccion-principal">Servicios técnicos</h2>
+        </div>
+      </div>
+
+      <div class="cuadricula-servicios">
+        <div class="tarjeta-servicio revelar">
+          <div class="icono-servicio-contenedor">
+            <svg class="icono-servicio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3 class="titulo-servicio">Desarrollo Web Práctico</h3>
+          <p class="descripcion-servicio">
+            Sitios web y aplicaciones a la medida. Código ordenado, interfaces rápidas y buen comportamiento en cualquier pantalla.
+          </p>
+        </div>
+
+        <div class="tarjeta-servicio revelar">
+          <div class="icono-servicio-contenedor">
+            <svg class="icono-servicio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="8" rx="2" />
+              <rect x="2" y="14" width="20" height="8" rx="2" />
+              <line x1="6" y1="6" x2="6.01" y2="6" />
+              <line x1="6" y1="18" x2="6.01" y2="18" />
+            </svg>
+          </div>
+          <h3 class="titulo-servicio">Servidores Linux &amp; VPS</h3>
+          <p class="descripcion-servicio">
+            Puesta a punto de servidores (Debian, Ubuntu), configuración de Nginx, cortafuegos UFW, certificados SSL y despliegue con Docker.
+          </p>
+        </div>
+
+        <div class="tarjeta-servicio revelar">
+          <div class="icono-servicio-contenedor">
+            <svg class="icono-servicio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+            </svg>
+          </div>
+          <h3 class="titulo-servicio">Bases de Datos &amp; Respaldos</h3>
+          <p class="descripcion-servicio">
+            Diseño de esquemas relacionales en PostgreSQL y MySQL, optimización básica y políticas automáticas de respaldo para proteger tu información.
+          </p>
+        </div>
+
+        <div class="tarjeta-servicio revelar">
+          <div class="icono-servicio-contenedor">
+            <svg class="icono-servicio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="16" y="16" width="6" height="6" rx="1" />
+              <rect x="2" y="16" width="6" height="6" rx="1" />
+              <rect x="9" y="2" width="6" height="6" rx="1" />
+              <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+              <path d="M12 12V8" />
+            </svg>
+          </div>
+          <h3 class="titulo-servicio">Soporte &amp; Diagnóstico</h3>
+          <p class="descripcion-servicio">
+            Revisión de problemas técnicos en producción, resolución de incidencias en Linux y optimización de servicios web ya instalados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quien-soy" class="seccion-quien-soy-destacada revelar">
+      <div class="columna-quien-soy-intro">
+        <p class="etiqueta-seccion-mono">04 / TRAYECTORIA</p>
+        <h2 class="titulo-seccion-principal">Conoce quién soy</h2>
+        <p class="bajada-quien-soy">
+          Empecé a los 12 años con una llave maya de 2 GB en el cibercafé del barrio, aprendí desarmando computadoras y montando servidores para comunidades de Minecraft. Tras una pausa de casi ocho años por responsabilidades laborales, en 2025 volví de lleno a la informática.
+        </p>
+        <div class="pildoras-historia-resumen">
+          <span class="pildora-meta">Inicios en 2012</span>
+          <span class="pildora-meta">Hardware &amp; Linux</span>
+          <span class="pildora-meta">Servidores Spigot &amp; VPS</span>
+          <span class="pildora-meta">Retorno en 2025</span>
+        </div>
+        <a href="conoce-quien-soy.html" class="boton-leer-historia">
+          <span>Leer historia completa</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <div class="columna-quien-soy-cita">
+        <blockquote class="bloque-cita-historia">
+          "Aprender resolviendo problemas reales en un servidor es la base de todo lo que sé."
+        </blockquote>
+        <span class="autor-cita-historia">— Daniel Uohnson</span>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion-contacto">
+      <div class="columna-formulario-contacto">
+        <p class="etiqueta-seccion-mono">05 / CONTACTO</p>
+        <h2 class="titulo-seccion-principal">Conversemos sobre tu proyecto</h2>
+
+        <form id="formulario-contacto" class="formulario-estilizado">
+          <div class="fila-formulario-doble">
+            <div class="grupo-campo">
+              <label for="campo-nombre" class="etiqueta-campo">Tu Nombre</label>
+              <input type="text" id="campo-nombre" name="nombre" class="entrada-campo" placeholder="Tu nombre o empresa"
+                required>
+            </div>
+            <div class="grupo-campo">
+              <label for="campo-email" class="etiqueta-campo">Tu Correo Electrónico</label>
+              <input type="email" id="campo-email" name="correo" class="entrada-campo" placeholder="ejemplo@correo.com"
+                required>
+            </div>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="campo-asunto" class="etiqueta-campo">Asunto</label>
+            <input type="text" id="campo-asunto" name="asunto" class="entrada-campo"
+              placeholder="¿En qué te puedo ayudar?" required>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="campo-mensaje" class="etiqueta-campo">Mensaje</label>
+            <textarea id="campo-mensaje" name="mensaje" class="area-campo" rows="5"
+              placeholder="Cuéntame sobre tu proyecto o la situación de tu servidor..."
+              required></textarea>
+          </div>
+
+          <div class="mensaje-estado-form mensaje-cargando">Enviando mensaje...</div>
+          <div class="mensaje-estado-form mensaje-error"></div>
+          <div class="mensaje-estado-form mensaje-exito">Mensaje enviado correctamente. Te responderé a la brevedad.</div>
+
+          <button type="submit" class="boton-enviar-formulario">
+            <span>Enviar Mensaje</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <aside class="columna-datos-contacto">
+        <div class="tarjeta-contacto-directo revelar">
+          <span class="titulo-contacto-directo">Ubicación</span>
+          <span class="valor-contacto-directo">San José, Costa Rica</span>
+        </div>
+
+        <div class="tarjeta-contacto-directo revelar">
+          <span class="titulo-contacto-directo">WhatsApp &amp; Llamadas</span>
+          <a href="tel:+50663689232" class="valor-contacto-directo">+506 6368 9232</a>
+        </div>
+
+        <div class="tarjeta-contacto-directo revelar">
+          <span class="titulo-contacto-directo">Correo Electrónico</span>
+          <div class="fila-correo-interactiva" style="margin-top: 0.25rem;">
+            <a href="mailto:duohnson@gmail.com" class="valor-contacto-directo"
+              style="font-size: 1.05rem;">duohnson@gmail.com</a>
+            <button type="button" class="boton-copiar-correo" data-correo="duohnson@gmail.com"
+              aria-label="Copiar correo">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
+              <span class="texto-copiar">Copiar</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="tarjeta-contacto-directo revelar">
+          <span class="titulo-contacto-directo">Disponibilidad</span>
+          <span class="valor-contacto-directo">Lunes a Viernes (16:00 - 22:00 GMT-6)</span>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="contenedor-principal cuadricula-pie">
+      <div class="columna-pie-principal">
+        <p class="lema-pie">Desarrollo web y administración de sistemas en Linux.</p>
+        <a href="mailto:duohnson@gmail.com" class="enlace-correo-pie">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          <span>duohnson@gmail.com ↗</span>
+        </a>
+        <p class="texto-derechos">Copyright © 2026 Daniel Uohnson. Todos los derechos reservados.</p>
+      </div>
+
+      <div class="columna-pie-enlaces">
+        <div>
+          <p class="titulo-columna-pie">Secciones</p>
+          <ul class="lista-enlaces-pie">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="conoce-quien-soy.html">Conoce quién soy</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="titulo-columna-pie">Redes</p>
+          <ul class="lista-enlaces-pie">
+            <li><a href="https://github.com/duohnson" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/duohnson/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+            <li><a href="https://www.instagram.com/duohnson/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+            <li><a href="https://www.facebook.com/duohnson/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=28"></script>
+  <script src="assets/js/contact.js?v=28"></script>
+</body>
+
+</html>
