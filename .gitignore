@@ -1,0 +1,9 @@
+/node_modules
+/public
+vite.config.js
+.env
+.env.development.local
+.env.local
+.env.production.local
+.env.test.local
+.env.test
