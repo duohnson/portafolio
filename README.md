@@ -1,7 +1,7 @@
 # DUOHNSON
 
 ## Descripción
-Portafolio personal, desarrollo full stack con JavaScript, Node.js, React y tecnologías relacionadas. Este proyecto muestra mis habilidades técnicas y formas de contacto.
+Portafolio personal de desarrollo backend, redes y administración Linux. Este proyecto muestra mis habilidades técnicas y formas de contacto.
 
 ## Tecnologías utilizadas
 - Node.js
@@ -24,9 +24,13 @@ Portafolio personal, desarrollo full stack con JavaScript, Node.js, React y tecn
     ```
 3. Configura las variables de entorno en un archivo `.env`:
     ```
-    PORT=3000
-    HOST=
-    etc...
+    PORT=8652
+    HOST=127.0.0.1
+    SMTP_HOST=
+    SMTP_PORT=587
+    SMTP_USER=
+    SMTP_PASS=
+    CONTACT_EMAIL=duohnson@gmail.com
     ```
 4. Modificar el sitio web para agregar tu información personal, proyectos y formas de contacto.
 
@@ -34,7 +38,13 @@ Portafolio personal, desarrollo full stack con JavaScript, Node.js, React y tecn
    ```bash
     npm start
     ```
-6. Accede a tu portafolio en `http://localhost:3000`.
+6. Accede a tu portafolio en `http://localhost:8652`.
+
+## Estilo y música
+
+El estilo inspirado en Zelda está en `assets/css/main.css`. Las secciones y la navegación mantienen la estructura del portafolio.
+
+La canción está en `src/music/cancion-zelda.m4a` y se controla desde `assets/js/musica.js`. Se reproduce en bucle al 5 % de volumen. Si el navegador bloquea el inicio automático, comienza tras el primer clic o una tecla. El botón de la cabecera permite pausarla; también se pausa al ocultar la pestaña.
 
 ## Despliegue
 Para desplegar tu portafolio, puedes usar servicios como Heroku, Vercel o DigitalOcean. Asegúrate de configurar las variables de entorno en el entorno de producción.
