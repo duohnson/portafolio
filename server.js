@@ -30,7 +30,7 @@ const limitadorGeneral = limiteTasa({
 
 const limitadorContacto = limiteTasa({
   windowMs: 60 * 60 * 1000,
-  max: 1,
+  max: 5,
   message: { estado: 'ERROR', mensaje: 'Has enviado demasiados mensajes. Por favor espera un momento.' },
   standardHeaders: true,
   legacyHeaders: false
