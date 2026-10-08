@@ -22,7 +22,7 @@ servidor.use(express.urlencoded({ extended: true }));
 
 const limitadorGeneral = limiteTasa({
   windowMs: 15 * 60 * 1000,
-  max: 200,
+  max: 5000,
   message: { estado: 'ERROR', mensaje: 'Demasiadas peticiones. Intenta más tarde.' },
   standardHeaders: true,
   legacyHeaders: false
